@@ -1,0 +1,70 @@
+{include file='publics/publics'}
+<div id="urHere">DouPHP 管理中心<b>></b><strong>修改商品分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <form action="" method="post">
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+       <td width="80" align="right">分类名称</td>
+       <td>
+        <input type="text" name="cat_name" value="{$cates.cat_name}" size="40" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td align="right">别名</td>
+       <td>
+        <input type="text" name="unique_id" value="{$cates.unique_id}" size="40" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td align="right">上级分类</td>
+       <td>
+        <select name="parent_id">
+         <option value="0">无</option>
+         {volist name="cateres" id="catere"}
+         <option {if condition="$cates['parent_id'] eq $catere['cat_id']"} selected="selected" {/if} value="{$cates.cat_id}" > {if condition="$catere['level'] neq 0"}|{/if}<?php echo str_repeat('-', $catere['level']*2)?>{$catere.cat_name}</option>
+         {/volist}
+                                    
+        </select>
+       </td>
+      </tr>
+      <tr>
+       <td align="right">关键字</td>
+       <td>
+        <input type="text" name="keywords" value="{$cates.keywords}" size="40" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td align="right">简单描述</td>
+       <td>
+        <textarea name="description"  value="{$cates.description}" cols="60" rows="4" class="textArea"></textarea>
+       </td>
+      </tr>
+      <tr>
+       <td align="right">排序</td>
+       <td>
+        <input type="text" name="sort" value="{$cates.sort}" size="5" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td></td>
+       <td>
+        
+        <input type="hidden" name="id" value="{$cates.cat_id}" />
+        <input  class="btn" type="submit" value="提交" />
+       </td>
+      </tr>
+     </table>
+    </form>
+       </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 2013-2015 漳州豆壳网络科技有限公司，并保留所有权利。
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+</body>
+</html>

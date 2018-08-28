@@ -1,0 +1,76 @@
+{include file='publics/publics'}
+<div id="urHere">DouPHP 管理中心<b>></b><strong>首页幻灯广告</strong> </div>   <div class="mainBox imgModule">
+    <h3><a href="{:url('add')}" class="actionBtn add">添加轮播图</a>首页幻灯广告</h3>
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+    <tr>
+      <!--  <th>添加幻灯</th> -->
+       <th align="left">幻灯列表</th>
+     </tr>
+     <tr>
+      <!-- <td width="350" valign="top"> -->
+      <!--  <form action="" method="post" >
+
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+         <tr>
+          <td><b>幻灯名称</b>
+          <input type="text" name="show_name" value="" size="20" class="inpMain" />
+          </td>
+         </tr>
+         <tr>
+          <td><b>幻灯图片</b>
+           <input type="file" name="show_img" class="inpFlie" />   </td>
+         </tr>
+         <tr>
+          <td><b>链接地址</b>
+           <input type="text" name="show_link" value="" size="40" class="inpMain" />
+          </td>
+         </tr>
+         <tr>
+          <td><b>排序</b>
+            <input type="text" name="sort" value="50" size="20" class="inpMain" />
+          </td>
+         </tr>
+         <tr>
+          <td>
+          <input type="hidden"  name='id' value="">
+           <input  class="btn" type="submit" value="提交" />
+          </td>
+         </tr>
+        </table>
+       </form> -->
+    <!--   </td> -->
+      <td valign="top">
+       <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+        <tr>
+        <td width="100">缩略图</td>
+         <td width="100">幻灯名称</td>
+         
+         <td width="50" align="center">排序</td>
+         <td width="80" align="center">操作</td>
+        </tr>
+        {volist name="bans" id="ban"}
+                <tr>
+         <td><a href="{$ban.link}" target="_blank"><img src="{$ban.image}" width="100" /></a></td>
+         <td>{$ban.name}</td>
+         <td align="center">{$ban.sort}</td>
+         <td align="center"><a href="{:url('edit',array('id'=>$ban['id']))}">编辑</a> | <a href="{:url('del',array('id'=>$ban['id']))}">删除</a></td>
+        </tr>
+        {/volist}        
+               </table>
+      </td>
+     </tr>
+    </table>
+   </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 2013-2015 漳州豆壳网络科技有限公司，并保留所有权利。
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+</body>
+</html>

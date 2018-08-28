@@ -1,0 +1,251 @@
+{include file='publics/publics'}
+<div id="urHere">DouPHP 管理中心<b>></b><strong>手机版系统设置</strong> </div> 
+ <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+   
+    <h3>手机版</h3>
+      <script type="text/javascript">
+     
+     $(function(){ $(".idTabs").idTabs(); });
+     
+    </script>
+  <div  class="idTabs">
+      <ul class="tab">
+           <li><a href="#system" >手机版系统设置</a></li>
+           <li><a href="#mnav">手机版导航</a></li>
+           <li><a href="#mshow">手机版幻灯</a></li>
+          </ul>
+       <div class="items">
+         
+            <div  id="system" >
+              <form action="" method="post" enctype="multipart/form-data">
+               <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                <tr>
+                 <th width="141">名称</th>
+                 <th>内容</th>
+                </tr>
+                                <tr>
+                 <td align="right">手机版站名</td>
+                 <td>
+                            <input type="text" name="mobile_name" value="DouPHP" size="80" class="inpMain" />
+                                     </td>
+                </tr>
+                                        <tr>
+                 <td align="right">手机版标题</td>
+                 <td>
+                            <input type="text" name="mobile_title" value="DouPHP触屏版" size="80" class="inpMain" />
+                                     </td>
+                </tr>
+                                        <tr>
+                 <td align="right">手机版关键字</td>
+                 <td>
+                            <input type="text" name="mobile_keywords" value="DouPHP,DouPHP触屏版" size="80" class="inpMain" />
+                                     </td>
+                </tr>
+                                        <tr>
+                 <td align="right">手机版描述</td>
+                 <td>
+                            <input type="text" name="mobile_description" value="DouPHP,DouPHP触屏版" size="80" class="inpMain" />
+                                     </td>
+                </tr>
+                                        <tr>
+                 <td align="right">手机版标志</td>
+                 <td>
+                            <input type="file" name="mobile_logo" size="18" />
+                  <img src="images/icon_no.png">                             </td>
+                </tr>
+                                        <tr>
+                 <td align="right">是否关闭手机版</td>
+                 <td>
+                            <label for="mobile_closed_0">
+                   <input type="radio" name="mobile_closed" id="mobile_closed_0" value="0" checked="true">
+                   否</label>
+                  <label for="mobile_closed_1">
+                   <input type="radio" name="mobile_closed" id="mobile_closed_1" value="1">
+                   是</label>
+                                     </td>
+                </tr>
+                                                  <tr>
+                  <td align="right">手机版文章列表数量</td>
+                  <td>
+                   <input type="text" name="mobile_display[article]" value="10" size="80" class="inpMain" />
+                             </td>
+                 </tr>
+                          <tr>
+                  <td align="right">手机版首页展示文章数量</td>
+                  <td>
+                   <input type="text" name="mobile_display[home_article]" value="5" size="80" class="inpMain" />
+                             </td>
+                 </tr>
+                          <tr>
+                  <td align="right">手机版商品列表数量</td>
+                  <td>
+                   <input type="text" name="mobile_display[product]" value="10" size="80" class="inpMain" />
+                             </td>
+                 </tr>
+                          <tr>
+                  <td align="right">手机版首页展示商品数量</td>
+                  <td>
+                   <input type="text" name="mobile_display[home_product]" value="4" size="80" class="inpMain" />
+                             </td>
+                 </tr>
+                 <tr>
+                 <td width="131"></td>
+                 <td>
+                  <input type="hidden" name="token" value="21e7d277" />
+                  <input name="submit" class="btn" type="submit" value="提交" />
+                 </td>
+                </tr>
+               </table>
+              </form>
+
+            </div>
+
+            <div id="mnav">
+              <form action="" method="post" enctype="multipart/form-data">
+                <table width="100%" border="0" cellpadding="10" cellspacing="0" class="tableBasic">
+                       <tr>
+                        <th width="113" align="center">导航名称</th>
+                        <th align="left">链接地址</th>
+                        <th width="80" align="center">排序</th>
+                        <th width="120" align="center">操作</th>
+                       </tr>
+                              <tr>
+                        <td> 公司简介</td>
+                        <td>http://demo.douco.com/m/about.html</td>
+                        <td align="center">10</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=25">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=25">删除</a></td>
+                       </tr>
+                              <tr>
+                        <td> 产品中心</td>
+                        <td>http://demo.douco.com/m/product</td>
+                        <td align="center">20</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=26">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=26">删除</a></td>
+                       </tr>
+                              <tr>
+                        <td> 文章中心</td>
+                        <td>http://demo.douco.com/m/news</td>
+                        <td align="center">30</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=27">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=27">删除</a></td>
+                       </tr>
+                              <tr>
+                        <td> 企业荣誉</td>
+                        <td>http://demo.douco.com/m/honor.html</td>
+                        <td align="center">40</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=28">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=28">删除</a></td>
+                       </tr>
+                              <tr>
+                        <td> 营销网络</td>
+                        <td>http://demo.douco.com/m/market.html</td>
+                        <td align="center">50</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=29">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=29">删除</a></td>
+                       </tr>
+                              <tr>
+                        <td> 人才招聘</td>
+                        <td>http://demo.douco.com/m/job.html</td>
+                        <td align="center">60</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=30">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=30">删除</a></td>
+                       </tr>
+                              <tr>
+                        <td> 联系我们</td>
+                        <td>http://demo.douco.com/m/contact.html</td>
+                        <td align="center">255</td>
+                        <td align="center"><a href="mobile.php?rec=nav&amp;act=edit&amp;id=31">编辑</a> | <a href="mobile.php?rec=nav&amp;act=del&amp;id=31">删除</a></td>
+                       </tr>
+                             
+                  </table>
+                </form>  
+            </div>
+            <div id="mshow">
+              <form  action="" method="post" enctype="multipart/form-data">
+              <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic simpleModule">
+              <tr>
+               <th>添加幻灯</th>
+               <th>幻灯列表</th>
+              </tr>
+              <tr>
+               <td width="350" valign="top"><form action="mobile.php?rec=show&amp;act=insert" method="post" enctype="multipart/form-data">
+                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+                  <tr>
+                   <td><b>幻灯名称</b>
+                    <input type="text" name="show_name" value="" size="20" class="inpMain"></td>
+                  </tr>
+                  <tr>
+                   <td><b>幻灯图片</b>
+                    <input type="file" name="show_img" class="inpFlie">
+                     </td>
+                  </tr>
+                  <tr>
+                   <td><b>链接地址</b>
+                    <input type="text" name="show_link" value="" size="40" class="inpMain"></td>
+                  </tr>
+                  <tr>
+                   <td><b>排序</b>
+                    <input type="text" name="sort" value="50" size="20" class="inpMain"></td>
+                  </tr>
+                  <tr>
+                   <td>            <input type="hidden" name="token" value="3971ba5c">
+                    <input name="submit" class="btn" type="submit" value="提交"></td>
+                  </tr>
+                </table>
+                </form></td>
+               <td valign="top"><table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+                 <tbody><tr>
+                  <td width="100">幻灯名称</td>
+                  <td></td>
+                  <td width="50" align="center">排序</td>
+                  <td width="80" align="center">操作</td>
+                 </tr>
+                          <tr>
+                 <td><a href="http://demo.douco.com/data/slide/m/20140921rqmzcp.jpg" target="_blank"><img src="http://demo.douco.com/data/slide/m/thumb/20140921rqmzcp_thumb.jpg" width="100"></a></td>
+                  <td>手机版广告图片01</td>
+                  <td align="center">10</td>
+                  <td align="center"><a href="mobile.php?rec=show&amp;act=edit&amp;id=5">编辑</a> | <a href="mobile.php?rec=show&amp;act=del&amp;id=5">删除</a></td>
+                 </tr>
+                          <tr>
+                 <td><a href="http://demo.douco.com/data/slide/m/20140921kwoypm.jpg" target="_blank"><img src="http://demo.douco.com/data/slide/m/thumb/20140921kwoypm_thumb.jpg" width="100"></a></td>
+                  <td>手机版广告图片02</td>
+                  <td align="center">20</td>
+                  <td align="center"><a href="mobile.php?rec=show&amp;act=edit&amp;id=6">编辑</a> | <a href="mobile.php?rec=show&amp;act=del&amp;id=6">删除</a></td>
+                 </tr>
+                          <tr>
+                 <td><a href="http://demo.douco.com/data/slide/m/20140921ypmnew.jpg" target="_blank"><img src="http://demo.douco.com/data/slide/m/thumb/20140921ypmnew_thumb.jpg" width="100"></a></td>
+                  <td>手机版广告图片03</td>
+                  <td align="center">30</td>
+                  <td align="center"><a href="mobile.php?rec=show&amp;act=edit&amp;id=7">编辑</a> | <a href="mobile.php?rec=show&amp;act=del&amp;id=7">删除</a></td>
+                 </tr>
+                          <tr>
+                 <td><a href="http://demo.douco.com/data/slide/m/20140921demloy.jpg" target="_blank"><img src="http://demo.douco.com/data/slide/m/thumb/20140921demloy_thumb.jpg" width="100"></a></td>
+                  <td>手机版广告图片04</td>
+                  <td align="center">40</td>
+                  <td align="center"><a href="mobile.php?rec=show&amp;act=edit&amp;id=8">编辑</a> | <a href="mobile.php?rec=show&amp;act=del&amp;id=8">删除</a></td>
+                 </tr>
+                         </table></td>
+                  </tr>
+                 </table>
+                  </form>
+            </div>
+              
+         </div> 
+        </div>
+          
+      </div>
+        
+  </div>
+    
+  
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 2013-2015 漳州豆壳网络科技有限公司，并保留所有权利。
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/global.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.tab.js"></script>
+</html>

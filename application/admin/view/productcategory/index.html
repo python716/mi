@@ -1,0 +1,33 @@
+{include file='publics/publics'}
+<div id="urHere">DouPHP 管理中心<b>></b><strong>商品分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="{:url('add')}" class="actionBtn add">添加分类</a>商品分类</h3>
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+        <th width="720" align="left" width="150%">分类名称</th>
+        <th align="left" width="300">上级栏目</th>
+       <th width="60" align="center">排序</th>
+        <th width="80" align="center">操作</th>
+     </tr>
+     {volist name="cateres" id="cate"}
+        <tr>
+        <td align="left"> {if condition="$cate['level'] neq 0"}|{/if}<?php echo str_repeat('-', $cate['level']*2)?>{$cate.cat_name}</td>
+        <td >{$cate.parent_id}</td>
+        <td align="center">{$cate.sort}</td>
+        <td align="center"><a href="{:url('edit',array('id'=>$cate['cat_id']))}">编辑</a> | <a href="{:url('del',array('id'=>$cate['cat_id']))}">删除</a></td>
+     </tr>
+      {/volist}      
+          </table>
+           </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 2013-2015 漳州豆壳网络科技有限公司，并保留所有权利。
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+</body>
+</html>
